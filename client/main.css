@@ -1,0 +1,39 @@
+li {
+  list-style: none;
+  padding: 5px;
+}
+
+li .text {
+  margin-left: 1px;
+}
+
+
+li.checked .text {
+  text-decoration: line-through;
+  color:#AAA;
+}
+
+li.private {
+  background: #eee;
+  border-color: #ddd;
+}
+h2{
+  padding-left: 40px;
+}
+
+.add-new  {
+  padding: 10px 0;
+  border:none;
+  padding-left: 40px;
+}
+.add-new input {
+  box-sizing: border-box;
+  padding: 10px 0;
+  border:none;
+  background: transparent;
+  font-size: 1em;
+}
+
+.add-new input:focus{
+  outline: 0;
+}

@@ -1,0 +1,110 @@
+<head>
+  <title>My Todo List</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My To Do List</title>
+  <meta name="description" content="Core HTML Project">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="boxed-page">
+		<nav id="gtco-header-navbar" class="navbar navbar-expand-lg py-4">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <!-- <span class="lnr lnr-moon"></span> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="lnr lnr-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-nav-header">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">
+                        Add task
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+<div class="jumbotron d-flex align-items-start" style="background-image: url('/img/hero-2.jpg')">
+  <div class="container text-left">
+    <h2 class="display-2 mb-4">My To Do List</h2>
+      {{> addNew }}
+
+    {{> toDoList}}
+  </div>
+</div>
+  <footer class="mastfoot mb-3 bg-white py-4 border-top">
+    <div class="inner container">
+         <div class="row">
+         	<div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center">
+         		<p class="mb-0">&copy; 2019 VR. All Right Reserved.</p>
+         	</div>
+        </div>
+    </div>
+</footer>	</div>
+<!-- Modal -->
+<!-- <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        {{> addNew }}
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+</body>
+
+<template name="toDoList">
+  <ul>
+    {{#each toDos}}
+     <!-- <li><input type="checkbox" name="" value="" > {{ text}}</li> -->
+     <li class="{{#if completed}}checked{{/if}}">
+    <!-- <button class="delete">&times;</button> -->
+
+    <input type="checkbox" checked="{{completed}}" class="toggle-checked" />
+
+    <span class="text">{{text}}</span>
+  </li>
+    {{/each}}
+
+
+  </ul>
+</template>
+
+<template name="addNew">
+  <form class="add-new">
+    <input type="text" name="text" class="addNew" placeholder="Type to add new tasks" autofocus />
+  </form>
+</template>
+<!-- <template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+
+
+<template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
+</template> -->
