@@ -6,6 +6,7 @@ import { toDos } from '../imports/api/todos.js';
 
 
 Template.toDoList.helpers({
+  //get all tasks, sorted by completd status and created date.
   toDos() {
       return toDos.find({},{ sort: {completed:false, createdAt: -1 }});
     },
@@ -13,15 +14,16 @@ Template.toDoList.helpers({
 
 Template.toDoList.events({
   'click .toggle-checked'() {
-   // Set the checked property to the opposite of its current value
-   toDos.update(this._id, {
-     $set: { completed : ! this.completed },
-   });
- },
+     // Set the completed property to the opposite of its current value
+     toDos.update(this._id, {
+       $set: { completed : ! this.completed },
+     });
+   },
 
- 'click .delete'() {
-   toDos.remove(this._id);
- },
+  'click .delete'() {
+    //delete selected task from the collection
+     toDos.remove(this._id);
+   },
 })
 
 Template.addNew.events({
