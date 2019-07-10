@@ -9,6 +9,8 @@ Once the application is up and running in the browser,
 
 # Instructions to install
 
+Install [meteor.js] (https://www.meteor.com/install)
+
 Download the code:
 ```
 git clone https://github.com/varumr/MyToDoList.git
