@@ -2,21 +2,18 @@ li {
   list-style: none;
   padding: 5px;
 }
-
 li .text {
   margin-left: 1px;
 }
-
-
 li.checked .text {
   text-decoration: line-through;
   color:#AAA;
 }
-
 li.private {
   background: #eee;
   border-color: #ddd;
 }
+
 h2{
   padding-left: 40px;
 }
@@ -33,7 +30,6 @@ h2{
   background: transparent;
   font-size: 1em;
 }
-
 .add-new input:focus{
   outline: 0;
 }
